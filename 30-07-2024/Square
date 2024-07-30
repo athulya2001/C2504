@@ -1,0 +1,7 @@
+Function FindSquare(num)
+        square = num * num
+        Return square 
+Procedure TestFindSquare()
+        Input num 
+        square = FindSquare(num)
+        Print square 
