@@ -1,8 +1,8 @@
-pseudo: routine test
+pseudo: routine
 Function FindCube(number)
         cube = number * number * number 
         Return cube 
-
+psuedo : routine test
 Procedure TestFindCube()
         Input number
         cube = FindCube(number)
