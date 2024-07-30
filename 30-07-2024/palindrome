@@ -1,0 +1,27 @@
+to check the number is palindrome or not
+
+pseudo: Routine 
+function IsPalindrome(number, size)
+set startindex = 0
+set endindex = size-1
+	for i in 0 to size-1
+			if(startindex < endindex)
+					if string[startIndex] ≠ string[endIndex]
+									return False
+					else 
+									increment startIndex
+									decrement endIndex
+				 					return True
+					end if 
+			end if
+	end for
+
+pseudo: TestRoutine 
+    function TestFindIndex()
+        Input size 
+        Input number ie array of 'size' numbers
+        num = IsPalindrome(number, size)
+        if IsPalindrome(num)
+            print "Palindrome "
+        else 
+            print "Not Palindrome "
