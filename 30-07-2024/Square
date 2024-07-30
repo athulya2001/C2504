@@ -1,6 +1,8 @@
+psuedo : routine
 Function FindSquare(num)
         square = num * num
         Return square 
+psuedo : routine test
 Procedure TestFindSquare()
         Input num 
         square = FindSquare(num)
