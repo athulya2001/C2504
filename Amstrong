@@ -1,0 +1,22 @@
+to check a number amstrong
+
+function IsArmstrong(number)
+    OrginalNumber = number
+    sum = 0
+    count = LENGTH(number)
+    
+    while number > 0
+        digit = number%10
+        sum = sum + (digit ^ count)
+        number = number/10
+return sum
+
+pseudo : rotine test
+function Is AmstrongTest()
+input originaNumber
+sum = IsArmstrong(number, )
+    if sum = originaNumber
+        print "Armstrong number"
+    else
+        print "Not Armstrong number"
+
