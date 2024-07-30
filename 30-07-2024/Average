@@ -1,0 +1,16 @@
+1. To find Average of 2 numbers
+
+psuedo code:
+Function Average(number1,number2)
+    Sum = number1+number2
+    average = Sum/2
+    return average
+
+Input number1
+Input number2
+
+Print Average
+
+2. To find cube of number
+
+psuedo code:
