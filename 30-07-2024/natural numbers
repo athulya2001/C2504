@@ -1,0 +1,16 @@
+to print N natural numbers
+
+pseudo: routine 
+    function NaturalNumberLimit(limit)
+         for num in 1 to limit
+              if (num!= limit)
+                  return num 
+              end if
+         end for
+
+pseudo: routine test 
+    function NaturalNumberLimitTest()
+        input limit
+        for num in 1 to limit
+            number = NaturalNumberLimit(limit)
+            print number
