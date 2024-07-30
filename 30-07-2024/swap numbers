@@ -1,0 +1,14 @@
+psuedo : routine
+Function Swap(number1, number2)
+        temp = number1
+        number1 = number2
+        number2 = temp
+        print number1,number2
+        return 0
+        
+psuedo : routine test
+Procedure TestFindCube()
+        Input number1
+        input number2
+        swap(number1,number2)
+        
