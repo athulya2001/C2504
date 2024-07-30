@@ -1,0 +1,9 @@
+pseudo: routine test
+Function FindCube(number)
+        cube = number * number * number 
+        Return cube 
+
+Procedure TestFindCube()
+        Input number
+        cube = FindCube(number)
+        Print cube 
