@@ -5,12 +5,8 @@ Function Average(number1,number2)
     Sum = number1+number2
     average = Sum/2
     return average
-
-Input number1
-Input number2
-
-Print Average
-
-2. To find cube of number
-
-psuedo code:
+Procedure TestFindAverage()
+        Input number1
+        Input number2
+        avg = FindCube(number1,number2)
+        Print avg 
