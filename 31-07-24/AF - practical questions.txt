@@ -1,170 +1,175 @@
-Coding standards are important 
-    for maintaining readability, 
-        consistency, and 
-        quality in a codebase. 
+Write pseudocode for calculating the total cost of items in a shopping cart, including applying a discount if the total exceeds a certain amount.
 
-By adhering to these standards, 
-you ensure your C# code is 
-    clean, 
-    consistent, and 
-    maintainable.
+function CalculateTotalCost(items, discountlimit, discountPercentage)
+	{
+		int totalCost, price, discountlimit
+		double discountPercentage
+		int[] items
+		input totalcost
+		input items and pricese
+  		For (item in items)
+    			totalCost = totalCost + item.price
+  
+  		If(totalCost > discountlimit)
+    			discountAmount = totalCost * discountPercentage / 100
+    			totalCost = totalCost - discountAmount
+  		End If
+  		Return totalCost
+	}
 
-Some commonly accepted C# coding standards and best practices.
+function CalculateTotalCostTest()
+	{
 
-General Guidelines
-1. Consistency: Follow a consistent style throughout the codebase.
-2. Clarity: Write clear and understandable code.
-3. Comments: Use comments to explain the purpose of the code, 
-  not how the code works.
+	}
 
-Naming Conventions
-- PascalCase for class, property, method, and namespace names.
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  class MyClass { }
-  void MyMethod() { }
-  namespace MyNamespace { }
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-- camelCase for local variables and method parameters.
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  int localVariable = 0;
-  void MyMethod(int parameter) { }
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-- SCREAMING_SNAKE_CASE for constants.
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  const int MAX_SIZE = 100;
-^^^^^^^^^^^^^^^^
+Write pseudocode for a simple calculator that takes two numbers and an operator (+, -, *, /) as input and outputs the result of the operation.
+has context menu
 
-Layout and Indentation
-- Use 4 spaces per indentation level.
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  if (condition)
-  {
-      DoSomething();
-  }
-^^^^^^^^^^^^^^^^
+function IsCalculation(operation)
+	{
+		double result
+		if(operation =='+')
+		{
+			result = number1+number2
+			return result
+		}
+		else if(operation =='-')
+		{
+			result = number1-number2
+			return result
+		}
 
-Braces
-- Use braces for all control structures.
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  if (condition)
-  {
-      DoSomething();
-  }
-  else
-  {
-      DoSomethingElse();
-  }
-^^^^^^^^^^^^^^^^
+		else if(operation =='*')
+		{
+			result = number1*number2
+			return result
+		}
 
-Spacing
-- Place a single space before and after binary operators.
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  int sum = a + b;
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-- Do not place a space after unary operators.
- ^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  int value = -number;
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-- Place spaces after commas.
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  MyMethod(a, b, c);
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		else if(operation =='/')
+		{
+			result = number1/number2
+			return result
+		}
+		else
+		{
+			print "not valid"
+		}
 
-Class and Method Structure
-- Order elements in a class by accessibility: 
-  public, internal, protected internal, protected, private.
-- Place static members above instance members.
- ^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  public class MyClass
-  {
-      public static int StaticMember;
-      
-      public int InstanceMember;
+	} 
 
-      public void InstanceMethod() { }
-      private void PrivateMethod() { }
-  }
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+function IsCaculationTest()
+	{	
+		int number1, number2, result
+		input number1
+		input number2
+		input operation
+		result = IsCalculation(operation)
+		print result
+	}
 
-Documentation
-- Use XML comments for public members.
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  /// <summary>
-  /// This method does something.
-  /// </summary>
-  public void MyMethod() { }
-^^^^^^^^^^^^^^^^
 
-Error Handling
-- Use exceptions for exceptional conditions.
-- Always catch specific exceptions, not `System.Exception`.
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-  try
-  {
-      // Code that may throw an exception
-  }
-  catch (SpecificException ex)
-  {
-      // Handle specific exception
-  }
-^^^^^^^^^^^^^^^^
+Write pseudocode for the FizzBuzz problem: For numbers 1 to 100, print "Fizz" for multiples of 3, "Buzz" for multiples of 5, and "FizzBuzz" for multiples of both.
 
-Example Code
-Here's a simple example applying these coding standards:
 
-^^^^^^^^^^^^^^^^csharp^^^^^^^^^^^^^^^^
-using System;
+input number
+for(int i=0;i<=100;i++)
+	{
+		if(i%3==0)
+			print "Fizz"
+		if(i%5==0)
+			print "Buzz"
+		print in new line
+	}
 
-namespace MyNamespace
+Write pseudocode to check if a given string is a palindrome.
+
+
+input string
+size = sizeof(string)
+startIndex = 0
+endIndex = size - 1
+for (int i = 0;i<size;i++)
 {
-    /// <summary>
-    /// This class represents a simple example.
-    /// </summary>
-    public class MyClass
-    {
-        // Static member
-        public static int StaticMember;
-
-        // Instance member
-        public int InstanceMember;
-
-        /// <summary>
-        /// This method does something.
-        /// </summary>
-        /// <param name="parameter">An example parameter.</param>
-        public void MyMethod(int parameter)
-        {
-            if (parameter > 0)
-            {
-                Console.WriteLine("Positive number");
-            }
-            else if (parameter < 0)
-            {
-                Console.WriteLine("Negative number");
-            }
-            else
-            {
-                Console.WriteLine("Zero");
-            }
-        }
-
-        /// <summary>
-        /// Private helper method.
-        /// </summary>
-        private void PrivateMethod()
-        {
-            // Implementation
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            MyClass myClass = new MyClass();
-            myClass.MyMethod(10);
-        }
-    }
+	if(startindex < endindex){
+		if string[startIndex] ≠ string[endIndex]
+			break;
+		else{
+			increment startIndex
+			decrement endIndex
+			return True
+		}
+	}
 }
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+if(True)
+{
+	print "palindrome"
+}
+else
+{
+	print "not palindrome"
+}
+
+Write pseudocode to find the maximum value in an array of integers.
+
+
+function MaxValue()
+{
+	int[] array;
+	int i,size, result
+	input array
+	size = sizeof(array)
+	result = array[0];
+	for(i=0;i<size;i++)
+		{
+			if(array[i]>result)
+				result = array[i]
+		}
+	print result
+}
+
+
+Write pseudocode to manage a simple bank account that allows deposits, withdrawals, and checking the balance.
+
+Function BankAccountManagement()
+{
+	String choice
+	double withdrawal, balance, deposit, amount, choiceAmount
+	input amount
+	print "Enter choice :"
+	input choice
+	input choiceAmount
+	if(choice == "withdrawal")
+		balance = amount - choiceAmount
+		print balance
+	else if(choice == "deposits")
+		balance = amount + choiceAmount
+		print balance
+	else if(choice == "balance")
+		print balance
+	else 
+		print "invalid choice"
+
+}
+
+Find the sum of first 10 even numbers
+
+BEGIN 
+	DECLARE number, sum, i AS INT
+	i=0
+	IF i <= 20
+		FOR EACH item in i
+			sum = sum+1
+		END FOR
+	END IF
+	PRINT "SUM : ", sum
+END
+
+
+
+
+
+
+
+
+
 
