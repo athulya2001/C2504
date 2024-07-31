@@ -9,6 +9,25 @@ function TestIsAdult(): -> None
             print 'You are an adult.'
         end if
 
+c# code
+bool IsAdult(int age)
+{
+    return age >= 18;
+}
+
+void TestIsAdult()
+{
+    Console.Write("Enter your age: ");
+    int age = int.Parse(Console.ReadLine());
+
+    if (IsAdult(age))
+    {
+        Console.WriteLine("You are an adult.");
+    }
+}
+
+
+
 [2] //Take a num 10, if num greater than 5
    print "num as 'greater than 5'"
 
@@ -21,7 +40,25 @@ function TestIsGreater(): -> None
             print  "num as 'greater than 5'"
         end if
 
-  [3]To print 'number is positive' if num > 0
+C# code
+
+bool IsGreater(int number)
+{
+    return number >= 5;
+}
+
+void TestIsGreater()
+{
+    Console.Write("Enter a number: ");
+    int number = int.Parse(Console.ReadLine());
+    if (IsGreater(number))
+    {
+        Console.WriteLine("The number is greater than or equal to 5");
+    }
+}
+
+
+[3]To print 'number is positive' if num > 0
        it should not print if not positive 
 
 function IsGreater(number) -> boolean 
@@ -121,7 +158,9 @@ function SuggestMaintenance(serviceOption->char) -> string
         Input serviceOption 
         print SuggestMaintenance(serviceOption)
 
-  
+//[8] to print N whole numbers while loop
+
+
 
 
   
