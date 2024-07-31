@@ -160,6 +160,14 @@ function SuggestMaintenance(serviceOption->char) -> string
 
 //[8] to print N whole numbers while loop
 
+function TestPrintWholeNumbers(): -> None
+        Input printWholeNumbers 
+        while(i >= 0 && i < printWholeNumbers)       
+                if(PrintWholeNumbers(printWholeNumbers)) 
+                    print printWholeNumbers
+                end if
+        end while
+
 
 
 
