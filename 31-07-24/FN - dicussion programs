@@ -4,7 +4,7 @@ function IsAdult(age) -> boolean
         isAdult = (age >= 18);
         return isAdult; 
 function TestIsAdult(): -> None
-        Input age 
+        Input age  
         if(IsAdult(age)) 
             print 'You are an adult.'
         end if
