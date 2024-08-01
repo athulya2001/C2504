@@ -1,37 +1,42 @@
-// 6. ReadAndCountDoctorsMin6DigitsSalaried(): without array 
-
-psuedo
-
-function ReadAndFindMinSalaryOfNDoctors():
-    MinSalary = -1
-    Input N //number of salaries 
-    for I = 1 .. N 
-        Input salary
-        if I == 1 then 
-             MinSalary = salary 
-             continue 
-        end if 
-
-        if salary < MinSalary then 
-            MinSalary = salary
-        end if 
-
-C#
-
-static bool IsDoctorSalaryMin6Digits(int doctorSalary)
+class Doctors6DigitsSalary()
+{
+  class IsDoctorSalaryMin6DigitsSarikaTwoTests
     {
-        int salary = doctorSalary;
-
-        int count = 0;
-        while (salary > 0)
+        static bool IsDoctorSalaryMin6Digits(int doctorSalary)
         {
-            int digit = salary % 10;
-            count += 1;
-            salary = salary / 10;
+            int salary = doctorSalary;
+    
+            int count = 0;
+            while (salary > 0)
+            {
+                int digit = salary % 10;
+                count += 1;
+                salary = salary / 10;
+            }
+    
+            return count >= 6;
         }
-
-        return count >= 6;
-    }
+        
+        static void ReadAndCountDoctorsMin6DigitsSalaried()
+        {
+            int count = 0;
+            Console.WriteLine("Number of salaries :");
+            int size = int.Parse(Console.ReadLine());  
+            for (int i = 0; i < size; i++)
+                {
+                    Console.WriteLine($"Enter salary of {i + 1} :");
+                    int salary = int.Parse(Console.ReadLine());
+                    bool isMin6Digits = IsDoctorSalaryMin6Digits(salary);
+                    if (isMin6Digits)
+                    {
+                        count += 1; 
+                    }
+                }
+        Console.WriteLine($"Number of 6 digits salaries :{count}");
+        }
+    
+// 6. ReadAndCountDoctorsMin6DigitsSalaried(): without array 
+// input=678943, 67894, 67894356 output=Number of 6 digits salaries :2
 
 static void ReadAndCountDoctorsMin6DigitsSalaried(): 
 {
@@ -51,24 +56,9 @@ static void ReadAndCountDoctorsMin6DigitsSalaried():
 }
 
 
-7. ReadAndFindMinSalaryOfNDoctors() without array
+//7. ReadAndFindMinSalaryOfNDoctors() without array
+// input=678943, 67894, 67894356 output = Minimum salary is :678943
 
-pseudo
-
-function ReadAndFindSumOfDoctorsSalariesTillZero()
-    sum = 0 
-    do 
-        input salary 
-        if !(salary > 0 || salary == 0) //Invalid salary
-            print "Input valid salary"
-            continue 
-        end if 
-        sum += salary 
-    while salary != 0
-    print sum 
-
-
-C#
 static void ReadAndFindMinSalaryOfNDoctors()
     {
         int MinSalary = -1;
@@ -88,29 +78,13 @@ static void ReadAndFindMinSalaryOfNDoctors()
                 MinSalary = salary;
             }
         }
+        Console.WriteLine("Minimum salary is :{MinSalary}");
     }
-}
 
-8. ReadAndFindSumOfDoctorsSalariesTillZero() use do..while loop 
 
-pseudo
+//8. ReadAndFindSumOfDoctorsSalariesTillZero() use do..while loop 
+// input=678943, 67894, 67894356 output = Sum of salaries : 68663299
 
-function ReadAndFindSumOfDoctorsSalariesTillZero()
-    sum = 0 
-    do 
-        input salary 
-        if !(salary > 0 || salary == 0) //Invalid salary
-            print "Input valid salary"
-            continue 
-        end if 
-        
-        if salary != 0 // Business Rule 
-            sum += salary
-        end if  
-    while salary != 0
-    print sum 
-
-C#
 static void ReadAndFindSumOfDoctorsSalariesTillZero()
 {
       int sum = 0
@@ -131,27 +105,8 @@ static void ReadAndFindSumOfDoctorsSalariesTillZero()
      Console.WriteLine($" Sum of Salaries :{sum});  
 }
 
-9. ReadAndFindSumOfDoctorsSalariesTillZero() use while loop 
-
-pseudo
-
-function ReadAndFindSumOfDoctorsSalariesTillZero()
-    sum = 0 
-    input salary
-    while salary != 0
-        if (salary < 0) //Invalid salary
-            print "Input valid salary"
-            input salary
-            continue
-        end if         
-        
-        sum += salary
-        input salary
-    end while 
-    print sum 
-
-
-C#
+//9. ReadAndFindSumOfDoctorsSalariesTillZero() use while loop 
+//// input=678943, 67894, 67894356 output = Sum of salaries : 68663299
 static void ReadAndFindSumOfDoctorsSalariesTillZero()
 {
       int sum = 0;
@@ -171,4 +126,28 @@ static void ReadAndFindSumOfDoctorsSalariesTillZero()
         int salary = int.Parse(Console.ReadLine());
       }
       Console.WriteLine($" Sum of Salaries :{sum});
+}
+
+ static void Main(string[] args) //user: p
+        {
+            Console.WriteLine("--------------------TestReadAndCountIsDoctorSalaryMin6Digits--------------------");
+            ReadAndCountDoctorsMin6DigitsSalaried();
+            Console.WriteLine("--------------------EndTestReadAndCountIsDoctorSalaryMin6Digits--------------------");
+
+            Console.WriteLine("--------------------TestMinIsDoctorSalaryMin6Digits--------------------");
+            ReadAndFindMinSalaryOfNDoctors();
+            Console.WriteLine("--------------------EndTestMinIsDoctorSalaryMin6Digits--------------------");
+
+            Console.WriteLine("--------------------TestReadAndFindSumDoWhileIsDoctorSalaryMin6Digits--------------------");
+            ReadAndFindSumOfDoctorsSalariesTillZero
+            Console.WriteLine("--------------------EndTestReadAndFindSumDoWhileIsDoctorSalaryMin6Digits--------------------");
+
+            Console.WriteLine("--------------------TestReadAndFindSumWhileIsDoctorSalaryMin6Digits--------------------");
+            ReadAndFindSumOfDoctorsSalariesTillZero()
+            Console.WriteLine("--------------------EndTestReadAndFindSumWhileIsDoctorSalaryMin6Digits--------------------");
+
+            Console.WriteLine("Press any key to contine...");
+            Console.ReadKey();
+        }
+    }
 }
