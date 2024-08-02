@@ -81,6 +81,238 @@ internal class Q09
 
 }
 
+//P4. print series 0, 1, 1, 2, 3, 5, 8, 13, ... N terms 
+
+class Q10
+{
+    static void PrintSeries0_1_1_2(int numOfTerms)
+    {
+        int firstTerm = 0;
+        int secondTerm = 1;
+        Console.Write($"{firstTerm} {secondTerm} ");
+        for (int I = 1; I <= numOfTerms-2 ; I++)
+        {
+                int nextTerm = firstTerm + secondTerm;
+                Console.Write($"{nextTerm} ");
+                firstTerm = secondTerm;
+                secondTerm = nextTerm; 
+        }
+    }
+    // input=5, output=0 1 1 2 3 
+    // input=6, output=0 1 1 2 3 5 
+    // input=3, output=0 1 1 
+    static void TestPrintSeries0_1_1_2()
+    {
+        Console.Write("Enter number of terms:");
+        int numOfTerms = int.Parse(Console.ReadLine());
+        Console.Write("Series: ");
+        PrintSeries0_1_1_2(numOfTerms);
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args) //user: p
+    {
+        Console.WriteLine("--------------TestPrintSeries10_12_14...--------------");
+        TestPrintSeries0_1_1_2();
+        Console.WriteLine("--------------End TestPrintSeries10_12_14...--------------");
+        Console.WriteLine("Press any key to contine...");
+        Console.ReadKey();
+    }
+}
+
+class Q11
+{
+    static void PrintSeries0_1_1_2(int numOfTerms)
+    {
+        int firstTerm = 0;
+        int secondTerm = 1;
+        Console.Write($"{firstTerm} {secondTerm} ");
+        int I = 1; 
+        while (I <= numOfTerms-2 )
+        {
+                int nextTerm = firstTerm + secondTerm;
+                Console.Write($"{nextTerm} ");
+                firstTerm = secondTerm;
+                secondTerm = nextTerm; 
+                I++;
+        }
+    }
+    // input=5, output=0 1 1 2 3 
+    // input=6, output=0 1 1 2 3 5 
+    // input=3, output=0 1 1 
+    static void TestPrintSeries0_1_1_2()
+    {
+        Console.Write("Enter number of terms:");
+        int numOfTerms = int.Parse(Console.ReadLine());
+        Console.Write("Series: ");
+        PrintSeries0_1_1_2(numOfTerms);
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args) //user: p
+    {
+        Console.WriteLine("--------------TestPrintSeries10_12_14...--------------");
+        TestPrintSeries0_1_1_2();
+        Console.WriteLine("--------------End TestPrintSeries10_12_14...--------------");
+        Console.WriteLine("Press any key to contine...");
+        Console.ReadKey();
+    }
+}
 
 
+class Q12
+{
+    static void PrintSeries0_1_1_2(int numOfTerms)
+    {
+        int firstTerm = 0;
+        int secondTerm = 1;
+        Console.Write($"{firstTerm} {secondTerm} ");
+        int I = 1; 
+        do
+        {
+                int nextTerm = firstTerm + secondTerm;
+                Console.Write($"{nextTerm} ");
+                firstTerm = secondTerm;
+                secondTerm = nextTerm; 
+                I++;
+        }while (I <= numOfTerms-2 );
+    }
+    // input=5, output=0 1 1 2 3 
+    // input=6, output=0 1 1 2 3 5 
+    // input=3, output=0 1 1 
+    static void TestPrintSeries0_1_1_2()
+    {
+        Console.Write("Enter number of terms:");
+        int numOfTerms = int.Parse(Console.ReadLine());
+        Console.Write("Series: ");
+        PrintSeries0_1_1_2(numOfTerms);
+        Console.WriteLine();
+    }
 
+    static void Main(string[] args) //user: p
+    {
+        Console.WriteLine("--------------TestPrintSeries10_12_14...--------------");
+        TestPrintSeries0_1_1_2();
+        Console.WriteLine("--------------End TestPrintSeries10_12_14...--------------");
+        Console.WriteLine("Press any key to contine...");
+        Console.ReadKey();
+    }
+}
+
+class Q13
+{
+    static void PrintSeries10_12_14(int numOfTerms)
+    {
+        int firstTerm = 0;
+        int secondTerm = 1;
+        int nextTerm=0;
+         
+        for(int I = 1;I <= numOfTerms-2 ; I++)
+        {
+                nextTerm = firstTerm + secondTerm;
+                firstTerm = secondTerm;
+                secondTerm = nextTerm; 
+               
+        }
+        Console.Write($"{nextTerm} ");
+    }
+    // input=5, output=10 12 14 16 18
+    // input=8, output=10 12 14 16 18 20 22 24
+    // input=3, output=10 12 14
+    static void TestPrintSeries10_12_14()
+    {
+        Console.Write("Enter number of terms:");
+        int numOfTerms = int.Parse(Console.ReadLine());
+        Console.Write("Series: ");
+        PrintSeries10_12_14(numOfTerms);
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args) //user: p
+    {
+        Console.WriteLine("--------------TestPrintSeries10_12_14...--------------");
+        TestPrintSeries10_12_14();
+        Console.WriteLine("--------------End TestPrintSeries10_12_14...--------------");
+        Console.WriteLine("Press any key to contine...");
+        Console.ReadKey();
+    }
+}
+
+class Q14
+{
+    static void PrintSeries10_12_14(int numOfTerms)
+    {
+        int firstTerm = 0;
+        int secondTerm = 1;
+        int nextTerm=0;
+        int I = 1; 
+        while (I <= numOfTerms-2 )
+        {
+                nextTerm = firstTerm + secondTerm;
+                firstTerm = secondTerm;
+                secondTerm = nextTerm; 
+                I++;
+        }
+        Console.Write($"{nextTerm} ");
+    }
+    // input=5, output=10 12 14 16 18
+    // input=8, output=10 12 14 16 18 20 22 24
+    // input=3, output=10 12 14
+    static void TestPrintSeries10_12_14()
+    {
+        Console.Write("Enter number of terms:");
+        int numOfTerms = int.Parse(Console.ReadLine());
+        Console.Write("Series: ");
+        PrintSeries10_12_14(numOfTerms);
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args) //user: p
+    {
+        Console.WriteLine("--------------TestPrintSeries10_12_14...--------------");
+        TestPrintSeries10_12_14();
+        Console.WriteLine("--------------End TestPrintSeries10_12_14...--------------");
+        Console.WriteLine("Press any key to contine...");
+        Console.ReadKey();
+    }
+}
+
+
+class Q15
+{
+    static void PrintSeries10_12_14(int numOfTerms)
+    {
+        int firstTerm = 0;
+        int secondTerm = 1;
+        int nextTerm=0;
+        int I = 1; 
+         do
+        {
+                nextTerm = firstTerm + secondTerm;
+                firstTerm = secondTerm;
+                secondTerm = nextTerm; 
+                I++;
+        }while (I <= numOfTerms-2 );
+        Console.Write($"{nextTerm} ");
+    }
+    // input=5, output=10 12 14 16 18
+    // input=8, output=10 12 14 16 18 20 22 24
+    // input=3, output=10 12 14
+    static void TestPrintSeries10_12_14()
+    {
+        Console.Write("Enter number of terms:");
+        int numOfTerms = int.Parse(Console.ReadLine());
+        Console.Write("Series: ");
+        PrintSeries10_12_14(numOfTerms);
+        Console.WriteLine();
+    }
+
+    static void Main(string[] args) //user: p
+    {
+        Console.WriteLine("--------------TestPrintSeries10_12_14...--------------");
+        TestPrintSeries10_12_14();
+        Console.WriteLine("--------------End TestPrintSeries10_12_14...--------------");
+        Console.WriteLine("Press any key to contine...");
+        Console.ReadKey();
+    }
+}
