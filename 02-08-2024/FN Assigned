@@ -316,3 +316,131 @@ class Q15
         Console.ReadKey();
     }
 }
+
+using System;
+class Q16
+{
+    //[Ashna, Neha, Nivya, Kuriakose[doubt], Rishwin[discussion], Giris]
+    
+    static void PrintNumTriangleMirroredRightAngle(int N)
+    { 
+        for(int I = N; I >= 1; I-- )
+        { 
+            for(int J = I; J >=1; J--)
+            {
+                Console.Write("  "); //2 spaces
+            }
+            for(int J = N; J >=I; J--)
+            {
+                Console.Write($"{J} ");//num and space
+            }
+            Console.WriteLine();//new line 
+            
+        }
+    }
+    //input=4,output=4 lines triangle 
+    //input=5,output=5 lines triangle 
+    //input=7,output=7 lines triangle 
+    static void TestPrintNumTriangleMirroredRightAngle()
+    {
+        Console.Write("Enter number of lines:");
+        int N = int.Parse(Console.ReadLine());
+        PrintNumTriangleMirroredRightAngle(N);
+    }
+    static void Main(string[] args) //user: p
+    {
+        Console.WriteLine("-----TestPrintNumTriangleMirroredRightAngle-----");
+        TestPrintNumTriangleMirroredRightAngle();
+        Console.WriteLine("-----End TestPrintNumTriangleMirroredRightAngle-----");
+        Console.WriteLine("Press any key to contine...");
+        Console.ReadKey();
+    }
+}
+
+class Q17
+{
+    //[Ashna, Neha, Nivya, Kuriakose[doubt], Rishwin[discussion], Giris]
+    
+    static void PrintNumTriangleMirroredRightAngle(int N)
+    { 
+        int I = N;
+        while( I >= 1)
+        { 
+            int J = I;
+            while( J >=1)
+            {
+                Console.Write("  "); //2 spaces
+                 J--;
+            }
+            int K = N;
+            while( K >=I)
+            {
+                Console.Write($"{K} ");//num and space
+                K--;
+            }
+            Console.WriteLine();//new line 
+             I-- ;
+        }
+    }
+    //input=4,output=4 lines triangle 
+    //input=5,output=5 lines triangle 
+    //input=7,output=7 lines triangle 
+    static void TestPrintNumTriangleMirroredRightAngle()
+    {
+        Console.Write("Enter number of lines:");
+        int N = int.Parse(Console.ReadLine());
+        PrintNumTriangleMirroredRightAngle(N);
+    }
+    static void Main(string[] args) //user: p
+    {
+        Console.WriteLine("-----TestPrintNumTriangleMirroredRightAngle-----");
+        TestPrintNumTriangleMirroredRightAngle();
+        Console.WriteLine("-----End TestPrintNumTriangleMirroredRightAngle-----");
+        Console.WriteLine("Press any key to contine...");
+        Console.ReadKey();
+    }
+}
+
+class Q18
+{
+    //[Ashna, Neha, Nivya, Kuriakose[doubt], Rishwin[discussion], Giris]
+    
+    static void PrintNumTriangleMirroredRightAngle(int N)
+    { 
+        int I = N;
+        do
+        { 
+            int J = I;
+            do
+            {
+                Console.Write("  "); //2 spaces
+                 J--;
+            }while( J >=1);
+            int K = N;
+            do
+            {
+                Console.Write($"{K} ");//num and space
+                K--;
+            }while(K >=I);
+            Console.WriteLine();//new line 
+             I-- ;
+        }while( I >= 1);
+    }
+    //input=4,output=4 lines triangle 
+    //input=5,output=5 lines triangle 
+    //input=7,output=7 lines triangle 
+    static void TestPrintNumTriangleMirroredRightAngle()
+    {
+        Console.Write("Enter number of lines:");
+        int N = int.Parse(Console.ReadLine());
+        PrintNumTriangleMirroredRightAngle(N);
+    }
+    static void Main(string[] args) //user: p
+    {
+        Console.WriteLine("-----TestPrintNumTriangleMirroredRightAngle-----");
+        TestPrintNumTriangleMirroredRightAngle();
+        Console.WriteLine("-----End TestPrintNumTriangleMirroredRightAngle-----");
+        Console.WriteLine("Press any key to contine...");
+        Console.ReadKey();
+    }
+}
