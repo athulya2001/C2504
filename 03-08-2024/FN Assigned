@@ -1,0 +1,64 @@
+
+
+-- to create the database "vendor_search_db"
+CREATE DATABASE vendor_search_db;
+
+-- to switch/use the database "trainer_search_db" ie to make as active / current database
+USE trainer_search_db;
+
+-- to creaate table "vendor" in db "trainer_search_db"(active)
+CREATE TABLE vendor (
+	id integer primary key identity(1,1),
+	name varchar(255) not null,
+	rating integer not null,
+	place varchar(126) not null,
+	type varchar(126) not null,
+
+);
+
+-- insert  into table vendor
+
+-- Insert sample values into the "vendor" table
+INSERT INTO vendor (name, rating, place, type)
+VALUES
+    ('1','Arun Kumar', 4, 'Kochi', 'Catering Service'),
+    ('2','Sreejith Nair', 5, 'Thiruvananthapuram', 'Event Planner'),
+    ('3','Rajesh Menon', 3, 'Kozhikode', 'Photography Service'),
+    ('4','Nisha Soman', 4, 'Thrissur', 'Flower Arrangement'),
+    ('5','Vineeth Chandran', 5, 'Ernakulam', 'Wedding Decorator'),
+    ('6','Lekshmi Prasad', 4, 'Kottayam', 'Catering Equipment Rental'),
+    ('7','Suresh Babu', 3, 'Alappuzha', 'Music and Entertainment'),
+    ('8','Reshma Raveendran', 5, 'Idukki', 'Wedding Cake Designer'),
+    ('9','Manoj Kumar', 4, 'Pathanamthitta', 'Wedding Transportation'),
+    ('10','Anju Sreekumar', 4, 'Kollam', 'Wedding Makeup Artist');
+
+CREATE TABLE admin (
+	id integer primary key identity(1,1),
+	username varchar(255) not null,
+	password varchar(512) not null,
+);
+
+-- insert into admin
+
+INSERT INTO admin(name, skill, place) 
+
+VALUES('1', 'john.doe@mediconnect.com', 'password2');
+INSERT INTO admin(name, skill, place)
+VALUES('2', 'anna.smith@mediconnect.com', 'password3');
+INSERT INTO admin(name, skill, place)
+VALUES('3', 'mike.jones@mediconnect.com', 'password4');
+-- to display / query rows of trainer 
+SELECT * FROM vendor;
+
+-- to insert (one) vendor 
+INSERT INTO vendor(name, skill, place)
+VALUES('mahesh', 'c#', 'mysore');
+
+INSERT INTO vendor(name, skill, place) 
+VALUES('gopal', 'c#', 'trivandrum');
+
+
+/*
+-- to drop the DATABASE "trainer_search_db" -- practice: before drop db, drop all other objects ie tables, views etc
+DROP DATABASE vendor_search_db;
+*/
