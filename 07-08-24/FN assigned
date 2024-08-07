@@ -3,7 +3,7 @@
 
 SELECT * FROM DEPT; -- normalized
 SELECT * FROM EMP;	-- normalized 
--- unormalized table [Sarika, Minnu, Nivya] 
+-- unormalized table 
 	-- join 
 SELECT EMP., DEPT. 
 FROM EMP INNER JOIN DEPT ON (EMP.DEPTNO = DEPT.DEPTNO);
