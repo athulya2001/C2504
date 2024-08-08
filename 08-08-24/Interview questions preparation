@@ -1,0 +1,59 @@
+    17.Views
+		18.	Sub Queries
+		19.	Aggregate Function
+		20.	SQL Joins
+
+
+1. What is a SQL View?
+
+A SQL View is a virtual table based on the result of a query. 
+It does not store data itself, but instead provides a simplified way to access complex data. 
+Views can be used to simplify queries, hide sensitive data, and improve data security.
+
+2. What is a Sub Query?
+
+A Sub Query, also known as a nested query or inner query, is a query nested inside another query. 
+The inner query is executed first, and its results are used by the outer query. 
+Subqueries can be used to retrieve data that meets certain conditions.
+
+3. What is the purpose of an Aggregate Function?
+
+An Aggregate Function performs calculations on a set of values and returns a single value. 
+Examples of aggregate functions include SUM, AVG, MAX, MIN, and COUNT. 
+These functions are used to summarize data and provide insights.
+
+4. What is the difference between an INNER JOIN and a LEFT JOIN?
+
+An INNER JOIN returns only the rows that have matching values in both tables, 
+while a LEFT JOIN returns all rows from the left table and the matching rows from the right table. 
+If there are no matches, the result will contain NULL values.
+
+5. What is a Scalar Sub Query?
+
+A Scalar Sub Query is a subquery that returns a single value. 
+It can be used in a query to perform calculations or retrieve data that meets certain conditions.
+
+6. What is the purpose of a GROUPING SETS clause?
+
+A GROUPING SETS clause is used to group data by one or more columns and perform aggregations on each group. 
+It allows you to perform multiple aggregations in a single query.
+
+7. What is a FULL OUTER JOIN?
+
+A FULL OUTER JOIN returns all rows from both tables, with NULL values in the columns where there are no matches. 
+It combines the results of a LEFT JOIN and a RIGHT JOIN.
+
+8. Can a View be used to update data?
+
+No, a View cannot be used to update data directly. 
+However, you can update the underlying tables that the View is based on, and the changes will be reflected in the View.
+
+9. What is the difference between a Sub Query and a Join?
+
+A Sub Query is used to retrieve data that meets certain conditions, while a Join is used to combine data from two or more tables based on a common column.
+
+10. What is the purpose of a CROSS JOIN?
+
+A CROSS JOIN returns the Cartesian product of both tables, 
+with each row of one table combined with each row of the other table. 
+It is used to combine data from two tables that do not have a common column.
