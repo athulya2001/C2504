@@ -1,0 +1,140 @@
+8. What is denormalization?
+   - Answer: Denormalization is the process of combining tables to optimize read performance by reducing the number of joins needed to retrieve data. It can lead to some redundancy but can improve query performance.
+
+9. What are constraints in SQL Server?
+   - Answer: Constraints are rules enforced on data columns to ensure data integrity and consistency. Common constraints include PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, and DEFAULT.
+
+10. Explain the different types of joins in SQL Server.
+    - Answer: Joins in SQL Server combine rows from two or more tables based on a related column. Types include:
+      - INNER JOIN: Returns only the rows with matching values in both tables.
+      - LEFT JOIN (LEFT OUTER JOIN): Returns all rows from the left table and the matched rows from the right table, with NULLs for unmatched rows.
+      - RIGHT JOIN (RIGHT OUTER JOIN): Returns all rows from the right table and the matched rows from the left table, with NULLs for unmatched rows.
+      - FULL JOIN (FULL OUTER JOIN): Returns all rows when there is a match in either left or right table.
+
+11. What is a stored procedure?
+    - Answer: A stored procedure is a set of SQL statements that can be stored in the database and executed repeatedly. It allows for modular programming, code reusability, and better security.
+
+12. What is a view?
+    - Answer: A view is a virtual table based on the result-set of an SQL query. It contains rows and columns, just like a real table, and can be used to simplify complex queries, enhance security, and present data in a specific format.
+
+13. What is an index? Explain the different types of indexes.
+    - Answer: An index is a database object that improves the speed of data retrieval operations on a table. Types include:
+      - Clustered Index: Physically reorders the data in the table to match the index.
+      - Non-Clustered Index: Creates a separate structure that references the table data without altering its physical order.
+
+14. What is a clustered index and a non-clustered index?
+    - Answer: A clustered index sorts and stores the data rows of the table based on the index key. Each table can have only one clustered index. A non-clustered index, on the other hand, creates a separate structure that points to the data rows in the table without changing the physical order.
+
+15. What are the differences between DELETE and TRUNCATE commands?
+    - Answer: DELETE removes rows one at a time and logs each row deletion, allowing for rollbacks. TRUNCATE removes all rows in a table by deallocating the data pages, making it faster and not logging individual row deletions, but it cannot be rolled back if not within a transaction.
+
+16. What is a transaction in SQL Server?
+    - Answer: A transaction is a sequence of operations performed as a single logical unit of work. A transaction ensures that either all operations succeed (commit) or none of them do (rollback), maintaining data integrity.
+
+17. Explain ACID properties.
+    - Answer: ACID properties ensure reliable transaction processing:
+      - Atomicity: Ensures that all operations within a transaction are completed; otherwise, the transaction is aborted.
+      - Consistency: Ensures that a transaction transforms the database from one consistent state to another.
+      - Isolation: Ensures that the operations of one transaction are isolated from those of other transactions.
+      - Durability: Ensures that the results of a committed transaction are permanently stored in the database.
+
+18. What is the difference between CHAR and VARCHAR?
+    - Answer: CHAR is a fixed-length data type, meaning it reserves a set amount of space regardless of the string length. VARCHAR is a variable-length data type, which only uses as much space as needed for the string.
+
+19. What is the use of the GROUP BY clause?
+    - Answer: The GROUP BY clause groups rows that have the same values in specified columns into summary rows, like “find the number of customers in each country.” It is often used with aggregate functions such as COUNT, MAX, MIN, SUM, and AVG.
+
+20. What is a subquery?
+    - Answer: A subquery is a query nested inside another query. It can be used in SELECT, INSERT, UPDATE, or DELETE statements to provide a value to the outer query.
+
+21. Explain the difference between an INNER JOIN and an OUTER JOIN.
+    - Answer: INNER JOIN returns rows when there is a match in both tables being joined. OUTER JOIN returns all rows from one table and the matched rows from the other table. There are three types of OUTER JOINs: LEFT OUTER JOIN, RIGHT OUTER JOIN, and FULL OUTER JOIN.
+
+22. What is a self-join?
+    - Answer: A self-join is a regular join but the table is joined with itself. It is useful for finding relationships within the same table.
+
+23. What is a cross join?
+    - Answer: A cross join returns the Cartesian product of the two tables, which means it returns all possible combinations of rows from the tables. If one table has 10 rows and the other has 20, the result set will have 200 rows.
+
+24. What is a trigger in SQL Server?
+    - Answer: A trigger is a special type of stored procedure that automatically executes or fires when certain events occur in the database, such as INSERT, UPDATE, or DELETE operations on a table.
+
+25. What is a cursor?
+    - Answer: A cursor is a database object used to retrieve, manipulate, and navigate through a result set row by row, allowing more granular control over data operations than a set-based approach.
+
+26. What is a SQL Server Agent?
+    - Answer: SQL Server Agent is a component of SQL Server that schedules and executes jobs, which can include running T-SQL scripts, backups, SSIS packages, and more.
+
+27. What are the different types of backups in SQL Server?
+    - Answer: The different types of backups in SQL Server include:
+      - Full Backup: Backs up the entire database.
+      - Differential Backup: Backs up only the data that has changed since the last full backup.
+      - Transaction Log Backup: Backs up the transaction log, which contains all the log records generated since the last log backup.
+
+28. What is the difference between FULL, DIFFERENTIAL, and TRANSACTION LOG backups?
+    - Answer: Full backups include the entire database. Differential backups include only the changes since the last full backup. Transaction log backups include all transactions that have occurred since the last transaction log backup.
+
+29. What is a deadlock in SQL Server?
+    - Answer: A deadlock occurs when two or more sessions permanently block each other by each holding a lock and requesting a lock held by the other session. SQL Server automatically detects deadlocks and resolves them by terminating one of the sessions.
+
+30. How do you optimize a query in SQL Server? *****
+    - Answer: To optimize a query in SQL Server, you can:
+      - Use appropriate indexes.
+      - Avoid unnecessary columns in SELECT statements.
+      - Use joins instead of subqueries where applicable.
+      - Use query hints and execution plans to identify
+
+31. What is SQL Server Management Studio (SSMS)?
+    - Answer: SSMS is an integrated environment for managing any SQL infrastructure, from SQL Server to Azure SQL Database. It provides tools to configure, monitor, and administer instances of SQL Server and databases.
+
+32. What is T-SQL?
+    - Answer: T-SQL (Transact-SQL) is an extension of SQL used in SQL Server. It includes procedural programming, local variables, and various support functions for string processing, date processing, and mathematics.
+
+33. What is the difference between a WHERE clause and a HAVING clause?
+    - Answer: WHERE is used to filter rows before any groupings are made, while HAVING is used to filter groups after the GROUP BY clause has been applied.
+
+34. What is a temporary table? How is it different from a table variable?
+    - Answer: A temporary table is a table that is created and used within a session. It is stored in the tempdb database. A table variable is a variable that can store table data and is stored in memory. Table variables are generally faster for smaller data sets and do not participate in transactions, logging, or locking.
+
+35. What is the use of the COALESCE function?
+    - Answer: COALESCE returns the first non-null value from a list of arguments. It is used to handle NULL values in queries.
+
+36. What are the different data types available in SQL Server?
+    - Answer: Data types in SQL Server include numeric (INT, FLOAT, DECIMAL), string (CHAR, VARCHAR, TEXT), date and time (DATE, TIME, DATETIME), binary (BINARY, VARBINARY), and special types (XML, JSON, UNIQUEIDENTIFIER).
+
+37. What is an identity column?
+    - Answer: An identity column is a column that automatically generates a unique value for each new row. It is commonly used for primary key columns.
+
+38. How do you retrieve the last inserted identity value in SQL Server?
+    - Answer: You can retrieve the last inserted identity value using the `SCOPE_IDENTITY()` function.
+
+39. What is a schema in SQL Server?
+    - Answer: A schema is a logical container for database objects such as tables, views, and procedures. It helps in organizing objects and controlling access to them.
+
+40. Explain the concept of a common table expression (CTE).
+    - Answer: A CTE is a temporary result set that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement. It is defined using the WITH clause.
+
+41. What is a primary key constraint?
+    - Answer: A primary key constraint uniquely identifies each row in a table. It ensures that the column (or combination of columns) contains unique values and does not allow NULLs.
+
+42. What is a foreign key constraint?
+    - Answer: A foreign key constraint ensures referential integrity by linking a column or a group of columns in one table to the primary key in another table.
+
+43. What is referential integrity?
+    - Answer: Referential integrity ensures that relationships between tables remain consistent. It means that a foreign key in one table must always have a corresponding value in the referenced table.
+
+44. What are the differences between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN?
+    - Answer: 
+      - INNER JOIN returns rows with matching values in both tables.
+      - LEFT JOIN returns all rows from the left table and matched rows from the right table; unmatched rows will have NULLs.
+      - RIGHT JOIN returns all rows from the right table and matched rows from the left table; unmatched rows will have NULLs.
+      - FULL JOIN returns rows when there is a match in one of the tables; unmatched rows will have NULLs from the other table.
+
+45. How can you improve the performance of a slow-running query?
+    - Answer: To improve the performance of a slow-running query, you can:
+      - Create and use appropriate indexes.
+      - Optimize the query structure and avoid unnecessary columns.
+      - Use query hints and execution plans.
+      - Break down complex queries into simpler ones.
+      - Avoid functions in WHERE clauses.
+      - Optimize joins and subqueries.
