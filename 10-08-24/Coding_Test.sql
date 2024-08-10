@@ -1,3 +1,5 @@
+#1
+
 Find Employees Who Earn More Than Their Managers
 Problem: Given an `Employees` table
 with columns `EmployeeID`, `ManagerID`, and `Salary`,
