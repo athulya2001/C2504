@@ -15,9 +15,9 @@ INNER JOIN
             Employee AS m 
             ON e.employeeID = m.ManagerID
 WHERE 
-            e.salary > m.salary
+            e.salary > m.salary;
 
-
+            
 #2
 
 Find the Top N Products by Sales Volume
