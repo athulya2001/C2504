@@ -5,11 +5,17 @@ Problem: Given an `Employees` table
 with columns `EmployeeID`, `ManagerID`, and `Salary`,
 find employees who earn more than their managers.
 
-SELECT e.employeeID, e.salary, m.salary AS m_salary
-From Employees AS e
-INNER JOIN Employee AS m 
+SELECT 
+            e.employeeID, 
+            e.salary, 
+            m.salary AS m_salary
+From 
+            Employees AS e
+INNER JOIN 
+            Employee AS m 
             ON e.employeeID = m.ManagerID
-WHERE e.salary > m.salary
+WHERE 
+            e.salary > m.salary
 
 
 #2
@@ -20,7 +26,7 @@ with columns `ProductID`, `SaleAmount`, and `SaleDate`,
 find the top 5 products by total sales volume.
 
 Table Structure:
-```
+
 CREATE TABLE Sales (
 ProductID INT,
 SaleAmount DECIMAL(10, 2),
@@ -28,12 +34,15 @@ SaleDate DATE
 );
 
 
-SELECT ProductID, SUM(SaleAmount) AS Total_Sales
-FROM Sales
+SELECT 
+            ProductID, 
+            SUM(SaleAmount) AS Total_Sales
+FROM 
+            Sales
 GROUP BY
-    ProductID
+            ProductID
 ORDER BY
-   Total_Sales ASC;
+            Total_Sales ASC;
 
 
 #3
@@ -44,9 +53,9 @@ with columns `SaleAmount` and `SaleDate`,
 find the total sales amount for each month.
 
 SELECT month(SaleDate) AS month,
-            (SELECT sum(SaleAmount) AS Total_Sales
+            (SELECT sum(SaleAmount) 
               FROM Sales s1
-              WHERE month(s1.SalesDate) = month(s2.SalesDate))
+              WHERE month(s1.SalesDate) = month(s2.SalesDate))AS Total_Sales
 From Sales s2
 GROUP BY 
       month(SaleDate);
@@ -75,9 +84,15 @@ GROUP BY CustomerID;
 
 
 #5
+Find Average Salary and Number of Employees in Each Department
+Problem: Given an `Employees` table,
+find the average salary and number of employees
+in each department.
+Table:
+Employees {EmployeeID, DepartmentID, Salary}
 
 SELECT 
-    (EmployeeID) AS Total_Employee,
+     COUNT(EmployeeID) AS Total_Employee,
      DepartmentID, 
      AVG(Salary) AS AVG_Salary
 FROM 
