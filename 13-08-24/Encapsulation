@@ -1,0 +1,142 @@
+Discussed 
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPS
+{     
+
+
+    class Movie
+    {
+        public int id;
+        public string name;
+        public Movie(int _id, string _name)
+        {
+            this.id = _id;
+            this.name = _name;
+        }
+        public Movie()
+        {
+            id = 0;
+            name = "";
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Movie manjummelBoys = new Movie(1001,"Manjummel boys");
+            Movie aavesham = new Movie();
+            aavesham.id = 1002;
+            aavesham.name = "avesham";
+            Console.WriteLine($"id={manjummelBoys.id},name={manjummelBoys.name}");
+            Console.WriteLine($"id={aavesham.id},name={aavesham.name}");
+            Console.ReadKey();
+
+        }
+    }
+}
+
+ASSIGNED
+  
+  2.Bank class example
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OopsProgram
+{
+    class Account
+    {
+        public string Number { get; private set; } // Encapsulate the account number
+        private float balance;
+        public float Balance
+        {
+            get { return balance; }
+            private set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Balance cannot be negative. Operation canceled.");
+                    return;
+                }
+                if (value > 5000000)
+                {
+                    Console.WriteLine("Balance cannot be greater than 5000000. Operation canceled.");
+                    return;
+                }
+                balance = value;
+            }
+        }
+
+        public Account(string _number)
+        {
+            Number = _number;
+            Balance = 0;
+        }
+
+       
+
+        public void Withdraw(float amount)
+        {
+            if (amount <= 0)
+            {
+                Console.WriteLine("Withdrawal amount must be positive.");
+            }
+            else if (amount > Balance)
+            {
+                Console.WriteLine("Insufficient balance. Withdrawal canceled.");
+            }
+            else
+            {
+                Balance -= amount;
+                Console.WriteLine($"{amount} withdrawn. New balance: {Balance}");
+            }
+        }
+    }
+
+     public void Deposit(float amount)
+        {
+            if (amount > 500000)
+            {
+                Console.WriteLine("Cannot deposit more than 500,000 at once.");
+            }
+            else if (amount <= 0)
+            {
+                Console.WriteLine("Deposit amount must be positive.");
+            }
+            else
+            {
+                Balance += amount;
+                Console.WriteLine($"{amount} deposited. New balance: {Balance}");
+            }
+        }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Account Athulya = new Account("1233445566778");
+            Athulya.Deposit(5000);  // Valid deposit
+            Athulya.Deposit(6000);  // Valid deposit
+            Athulya.Withdraw(5000);  // Valid withdrawal
+          
+            Console.WriteLine($"Athulya's balance : {Athulya.Balance}");
+            Athulya.Withdraw(7000); // Should fail due to insufficient funds
+            Athulya.Withdraw(9000); // Should fail due to insufficient funds
+            Athulya.Deposit(1000000); // Should fail due to deposit limit
+            Athulya.Deposit(1000); // Valid deposit
+            //neha.Balance = 45;   error
+            Console.WriteLine($"Athulya's final account balance is {girish.Balance}");
+            Console.ReadKey();
+        }
+    }
+}
