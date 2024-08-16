@@ -1,0 +1,82 @@
+. Cricket Ground Boundry Sides Distances from batsman (from Pavilion End)
+        Leg Side 
+        Off Side  
+        Straight 
+        Third Man  
+    Compare two cricket grounds:
+        find the shortest distance from each ground 
+        and compare two ground based on shortest distance 
+            check which is preferred ground for batsman 
+
+    C#: CricketGround{ LegSideDistance: int, 
+        OffSideDistace: int, 
+        StraightDistance: int, 
+        ThirdManDistance: int }
+    - int FindShortestDistance()
+        among four distance find min 
+    - bool IsShortestDistanceGt(CricketGround other)     
+    
+    C3: UserOfCricketGround will compare two grounds 
+        will say which ground is preferred ground 
+
+
+
+
+using System;
+
+class CricketGround
+{
+    public int LegSideDistance { get; set; }
+    public int OffSideDistance { get; set; }
+    public int StraightDistance { get; set; }
+    public int ThirdManDistance { get; set; }
+
+    public CricketGround(int legSide, int offSide, int straight, int thirdMan)
+    {
+        LegSideDistance = legSide;
+        OffSideDistance = offSide;
+        StraightDistance = straight;
+        ThirdManDistance = thirdMan;
+    }
+
+    public int FindShortestDistance()
+    {
+        int[] distances = { LegSideDistance, OffSideDistance, StraightDistance, ThirdManDistance };
+        return distances.Min();
+    }
+
+
+    public bool IsShortestDistanceGt(CricketGround other)
+    {
+        return this.FindShortestDistance() > other.FindShortestDistance();
+    }
+
+    public override string ToString()
+    {
+        return $"[LegSide={LegSideDistance}, OffSide={OffSideDistance}, Straight={StraightDistance}, ThirdMan={ThirdManDistance}, Shortest={FindShortestDistance()}]";
+    }
+}
+
+internal class UserOfCricketGround
+{
+    static void Main(string[] args)
+    {
+        CricketGround ground1 = new CricketGround(75, 80, 65, 70);
+        CricketGround ground2 = new CricketGround(78, 82, 60, 68);
+
+        if (ground1.IsShortestDistanceGt(ground2))
+        {
+            Console.WriteLine($"Ground 1 {ground1} is less preferred than Ground 2 {ground2}");
+        }
+        else if (ground2.IsShortestDistanceGt(ground1))
+        {
+            Console.WriteLine($"Ground 1 {ground1} is more preferred than Ground 2 {ground2}");
+        }
+        else
+        {
+            Console.WriteLine($"Ground 1 {ground1} and Ground 2 {ground2} are equally preferred");
+        }
+
+        Console.ReadKey();
+    }
+}
