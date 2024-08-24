@@ -19,7 +19,8 @@ Dont use built-in C# sorting or LINQ.
 - Implement and call your own sorting algorithm.
 Dont use built-in C# sorting or LINQ.
 
-  using System;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -131,10 +132,14 @@ namespace AssessementFourthWeek
             Console.Write("Enter the number of hospital medications: ");
             int N = int.Parse(Console.ReadLine());
 
+
             ReadHosptitalMedication manager = new ReadHosptitalMedication(N);
             manager.ReadMedications();
 
-            HospitalMedication highestDosageMedication = manager.FindHighestDosageByDoctor("Dr. Smith");
+            Console.WriteLine("Enter Doctor name:");
+            string doctorName = Console.ReadLine();
+
+            HospitalMedication highestDosageMedication = manager.FindHighestDosageByDoctor(doctorName);
             Console.WriteLine("Medication with highest dosage:");
             Console.WriteLine($"Medication: {highestDosageMedication.Medication}");
             Console.WriteLine($"Dosage: {highestDosageMedication.Dosage} mg");
@@ -153,3 +158,32 @@ namespace AssessementFourthWeek
         }
     }
 }
+
+
+  
+Enter the number of hospital medications: 3
+Enter Hospital ID: 234
+Enter Doctor Name: athulya
+Enter Medication: wef
+Enter Dosage (mg): 45
+Enter Hospital ID: 234
+Enter Doctor Name: athulya
+Enter Medication: erf
+Enter Dosage (mg): 50
+Enter Hospital ID: 456
+Enter Doctor Name: raj
+Enter Medication: erf
+Enter Dosage (mg): 60
+Enter Doctor name:
+athulya
+Medication with highest dosage:
+Medication: erf
+Dosage: 50 mg
+Medication with second least dosage:
+Medication: erf
+Dosage: 50 mg
+Sorted medications by name:
+Medication: erf, Dosage: 50 mg
+Medication: erf, Dosage: 60 mg
+Medication: wef, Dosage: 45 mg
+Press any key to continue . . .
